@@ -96,6 +96,10 @@ export class UiInputs {
             for (let p of this.scene.getField().filter(p => p?.isActive(true)))
                 p.toggleStats(false);
         }
+        if(this.scene.ui?.getMode() === Mode.STARTER_SELECT) {
+            this.scene.ui.processInput(Button.STATS);
+        }
+            
     }
 
     buttonMenu(): void {
